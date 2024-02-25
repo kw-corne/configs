@@ -1,0 +1,66 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true
+    },
+
+    // VIM CONFIG ////////////////////////////////////////////////////////////////////////
+    "vim.leader": "<space>",
+    "vim.easymotion": true,
+    // "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+
+    "vim.insertModeKeyBindings": [ ],
+
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<Enter>"],
+            "after": ["o", "<Esc>"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before": ["<Tab>"],
+            "commands": ["workbench.action.nextEditor"]
+        },
+        {
+            "before": ["<S-Tab>"],
+            "commands": ["workbench.action.previousEditor"]
+        },
+        {
+            "before": ["<leader>", "e"],
+            "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<C-h>"],
+            "commands": ["workbench.action.navigateLeft"]
+        },
+        {
+            "before": ["<C-j>"],
+            "commands": ["workbench.action.navigateDown"]
+        },
+        {
+            "before": ["<C-k>"],
+            "commands": ["workbench.action.navigateUp"]
+        },
+        {
+            "before": ["<C-l>"],
+            "commands": ["workbench.action.navigateRight"]
+        },
+    ],
+
+    "vim.handleKeys": {
+        "<C-f>": false
+    },
+
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1
+    }
+    //////////////////////////////////////////////////////////////////////////////////////
+}
