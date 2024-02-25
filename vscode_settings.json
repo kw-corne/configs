@@ -1,9 +1,20 @@
 {
     "workbench.iconTheme": "vscode-icons",
+    "editor.minimap.enabled": false,
+
+    "editor.semanticTokenColorCustomizations": {
+        "enabled": true,
+        "rules": {
+            "*.mutable": {
+                "underline": false,
+            }
+        }
+    },
 
     "[rust]": {
         "editor.defaultFormatter": "rust-lang.rust-analyzer",
-        "editor.formatOnSave": true
+        "editor.formatOnSave": true,
+        "editor.inlayHints.enabled": "offUnlessPressed",
     },
 
     // VIM CONFIG ////////////////////////////////////////////////////////////////////////
@@ -16,14 +27,45 @@
 
     "vim.insertModeKeyBindings": [ ],
 
+    "vim.visualModeKeyBindings": [
+        {
+            "before": ["p"],
+            "after":["P"]
+        }
+    ],
+
     "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["s"],
+            "after": ["leader", "leader", "2", "s"]
+        },
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
+            "before": ["K"],
+            "commands": ["editor.action.showHover"]
+        },
+        {
+            "before": ["<leader>", "g", "d"],
+            "commands": ["editor.action.revealDefinition"],
+        },
+        {
+            "before": ["<leader>", "l", "r"],
+            "commands": ["editor.action.rename"],
+        },
+        {
+            "before": [";"],
+            "after": ["A", ";", "<Esc>"]
+        },
+        {
+            "before": [","],
+            "after": ["A", ",", "<Esc>"]
+        },
         {
             "before": ["<Enter>"],
             "after": ["o", "<Esc>"]
-        },
-        {
-            "before": ["<C-n>"],
-            "commands": [":nohl"]
         },
         {
             "before": ["<Tab>"],
@@ -36,6 +78,14 @@
         {
             "before": ["<leader>", "e"],
             "commands": ["workbench.action.toggleSidebarVisibility"]
+        },
+        {
+            "before": ["<leader>", "b", "c"],
+            "commands": ["workbench.action.terminal.killEditor"]
+        },
+        {
+            "before": ["<leader>", "f"],
+            "commands": ["workbench.action.quickOpen"],
         },
         {
             "before": ["<C-h>"],
