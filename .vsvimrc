@@ -1,0 +1,49 @@
+set clipboard=unnamed
+
+let mapleader = "\<space>"
+
+set ignorecase
+set smartcase
+set incsearch
+set tabstop=4
+set shiftwidth=4
+set backspace=eol,start,indent
+set nostartofline
+set hlsearch
+set autoindent
+set expandtab
+set ttimeout
+set ttimeoutlen=50
+
+nnoremap ; A;<Esc>
+nnoremap , A,<Esc>
+nnoremap Y y$
+
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
+nnoremap <leader>fh :vsc Edit.Replace<cr>
+
+nnoremap <cr> :noh<cr><cr>
+nnoremap <Enter> o<Esc>
+nnoremap <c-s> :wa<cr>
+
+nnoremap <leader>| :vsc Window.NewVerticalTabGroup<cr>
+nnoremap <leader>\ :vsc Window.NewHorizontalTabGroup<cr>
+nnoremap <leader>bc :vsc Window.CloseDocumentWindow<cr>
+nnoremap <leader>b] :vsc Window.NextDocumentWindow<cr>
+nnoremap <leader>b[ :vsc Window.PreviousDocumentWindow<cr>
+
+nnoremap <c-o> :vsc View.NavigateBackward<cr>
+nnoremap <c-i> :vsc View.NavigateForward<cr>
+
+xnoremap <leader>/ :vsc Edit.ToggleLineComment<cr><esc>
+nnoremap <leader>/ :vsc Edit.ToggleLineComment<cr><esc>
+
+nnoremap <leader>lR :vsc Edit.FindAllReferences<cr>
+nnoremap <leader>lr :vsc Refactor.Rename<cr>
+nnoremap gd :vsc Edit.GoToDefinition<cr>
+
+nnoremap <leader>bf :vsc Edit.FormatDocument<cr>
+xnoremap <leader>bf :vsc Edit.FormatSelection<cr>
+nnoremap <leader>uw :vsc Edit.ToggleWordWrap<cr>
