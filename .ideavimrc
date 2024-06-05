@@ -1,0 +1,84 @@
+map <space> <nop>
+let mapleader=" "
+set clipboard=unnamed
+
+set surround
+set commentary
+set ideajoin
+
+nmap s <Action>(AceAction)
+
+set highlightedyank
+let g:highlightedyank_highlight_duration = "100"
+let g:highlightedyank_highlight_color = "rgba(57, 197, 187, 155)"
+
+set ignorecase
+set smartcase
+set incsearch
+set tabstop=4
+set shiftwidth=4
+set backspace=eol,start,indent
+set nostartofline
+set hlsearch
+set autoindent
+set expandtab
+set ttimeout
+set ttimeoutlen=50
+set number
+set relativenumber
+set gdefault
+
+map H ^
+map L $
+
+xnoremap < <gv
+xnoremap > >gv
+
+nmap <leader>ff <Action>(GotoFile)
+nmap <leader>fw <Action>(FindInPath)
+
+nmap <C-i> <Action>(Forward)
+nmap <C-o> <Action>(Back)
+
+nmap <leader>bc <Action>(CloseContent)
+nmap <leader>ba <Action>(CloseAllEditors)
+nmap <leader>bx <Action>(CloseAllEditorsButActive)
+nmap <leader>bp <Action>(CloseAllUnpinnedEditors)
+
+nmap <leader>1 <Action>(GoToTab1)
+nmap <leader>2 <Action>(GoToTab2)
+nmap <leader>3 <Action>(GoToTab3)
+nmap <leader>4 <Action>(GoToTab4)
+nmap <leader>5 <Action>(GoToTab5)
+nmap <leader>6 <Action>(GoToTab6)
+nmap <leader>7 <Action>(GoToTab7)
+nmap <leader>8 <Action>(GoToTab8)
+nmap <leader>9 <Action>(GoToTab9)
+
+nmap <Tab> <Action>(NextTab)
+nmap <S-Tab> <Action>(PreviousTab)
+nmap <leader>p <Action>(PinActiveEditorTab)
+nmap [b <Action>(PreviousTab)
+nmap ]b <Action>(NextTab)
+nmap [g <Action>(GotoPreviousError)
+nmap ]g <Action>(GotoNextError)
+
+map <C-|> <Action>(SplitHorizontally)
+map <C-\> <Action>(SplitVertically)
+nmap <C-k> <C-w>k
+nmap <C-j> <C-w>j
+nmap <C-h> <C-w>h
+nmap <C-l> <C-w>l
+
+map <leader>/ <Action>(CommentByLineComment)
+map <leader>gc <Action>(CommentByBlockComment)
+
+nnoremap ; A;<Esc>
+nnoremap , A,<Esc>
+nnoremap Y y$
+
+nnoremap <c-s> :wa<cr>
+nmap <Enter> o<Esc>
+
+map <leader>lr <Action>(RenameElement)
+map <leader>z <Action>(ToggleDistractionFreeMode)
