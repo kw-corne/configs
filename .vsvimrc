@@ -30,11 +30,18 @@ nnoremap <c-s> :wa<cr>
 nnoremap H _
 nnoremap L $
 
+onoremap iq i"
+vnoremap iq i"
+onoremap aq a"
+vnoremap aq a"
+
+vnoremap X :s/\%V
+
 nnoremap <leader>\ :vsc Window.NewVerticalTabGroup<cr>
 nnoremap <leader>| :vsc Window.NewHorizontalTabGroup<cr>
 nnoremap <leader>bc :vsc Window.CloseDocumentWindow<cr>
-nnoremap <leader>b] :vsc Window.NextDocumentWindow<cr>
-nnoremap <leader>b[ :vsc Window.PreviousDocumentWindow<cr>
+nnoremap g] :vsc Window.NextDocumentWindow<cr>
+nnoremap g[ :vsc Window.PreviousDocumentWindow<cr>
 
 nnoremap <c-o> :vsc View.NavigateBackward<cr>
 nnoremap <c-i> :vsc View.NavigateForward<cr>
@@ -50,3 +57,31 @@ nnoremap <leader>fh :vsc Edit.Replace<cr>
 nnoremap <leader>bf :vsc Edit.FormatDocument<cr>
 xnoremap <leader>bf :vsc Edit.FormatSelection<cr>
 nnoremap <leader>uw :vsc Edit.ToggleWordWrap<cr>
+
+nnoremap <leader>tr :vsc TestExplorer.RepeatLastRun<cr>
+
+map s <Nop>
+nnoremap s :vsc Tools.InvokePeasyMotionTwoCharJump<CR>
+
+nnoremap <leader>bt :vsc Window.PinTab<cr>
+nnoremap <leader>bq :vsc Window.CloseAllButPinned<cr>
+
+nnoremap <leader>1 :vsc Window.GoToPinnedTab1<cr>
+nnoremap <leader>2 :vsc Window.GoToPinnedTab2<cr>
+nnoremap <leader>3 :vsc Window.GoToPinnedTab3<cr>
+nnoremap <leader>4 :vsc Window.GoToPinnedTab4<cr>
+nnoremap <leader>5 :vsc Window.GoToPinnedTab5<cr>
+nnoremap <leader>6 :vsc Window.GoToPinnedTab6<cr>
+nnoremap <leader>7 :vsc Window.GoToPinnedTab7<cr>
+nnoremap <leader>8 :vsc Window.GoToPinnedTab8<cr>
+nnoremap <leader>9 :vsc Window.GoToPinnedTab9<cr>
+
+xnoremap <leader>1 :vsc Window.GoToPinnedTab1<cr>
+xnoremap <leader>2 :vsc Window.GoToPinnedTab2<cr>
+xnoremap <leader>3 :vsc Window.GoToPinnedTab3<cr>
+xnoremap <leader>4 :vsc Window.GoToPinnedTab4<cr>
+xnoremap <leader>5 :vsc Window.GoToPinnedTab5<cr>
+xnoremap <leader>6 :vsc Window.GoToPinnedTab6<cr>
+xnoremap <leader>7 :vsc Window.GoToPinnedTab7<cr>
+xnoremap <leader>8 :vsc Window.GoToPinnedTab8<cr>
+xnoremap <leader>9 :vsc Window.GoToPinnedTab9<cr>
