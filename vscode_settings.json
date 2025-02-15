@@ -17,6 +17,20 @@
         "editor.inlayHints.enabled": "offUnlessPressed",
     },
 
+    "[csharp]": {
+        "editor.formatOnSave": true,
+    },
+
+    "[lua]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "JohnnyMorganz.stylua"
+    },
+
+    "[luau]": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "JohnnyMorganz.stylua"
+    },
+
     // VIM CONFIG ////////////////////////////////////////////////////////////////////////
     "vim.leader": "<space>",
     "vim.easymotion": true,
@@ -87,6 +101,10 @@
             "commands": ["workbench.action.quickOpen"],
         },
         {
+            "before": ["<leader>", "h"],
+            "commands": ["editor.action.startFindReplaceAction"],
+        },
+        {
             "before": ["<C-h>"],
             "commands": ["workbench.action.navigateLeft"]
         },
@@ -102,14 +120,66 @@
             "before": ["<C-l>"],
             "commands": ["workbench.action.navigateRight"]
         },
+        {
+            "before": ["<leader>", "1"],
+            "commands": ["workbench.action.openEditorAtIndex1"]
+        },
+        {
+            "before": ["<leader>", "2"],
+            "commands": ["workbench.action.openEditorAtIndex2"]
+        },
+        {
+            "before": ["<leader>", "3"],
+            "commands": ["workbench.action.openEditorAtIndex3"]
+        },
+        {
+            "before": ["<leader>", "4"],
+            "commands": ["workbench.action.openEditorAtIndex4"]
+        },
+        {
+            "before": ["<leader>", "5"],
+            "commands": ["workbench.action.openEditorAtIndex5"]
+        },
+        {
+            "before": ["<leader>", "6"],
+            "commands": ["workbench.action.openEditorAtIndex6"]
+        },
+        {
+            "before": ["<leader>", "6"],
+            "commands": ["workbench.action.openEditorAtIndex6"]
+        },
+        {
+            "before": ["<leader>", "7"],
+            "commands": ["workbench.action.openEditorAtIndex7"]
+        },
+        {
+            "before": ["<leader>", "8"],
+            "commands": ["workbench.action.openEditorAtIndex8"]
+        },
+        {
+            "before": ["<leader>", "9"],
+            "commands": ["workbench.action.openEditorAtIndex9"]
+        },
+        {
+            "before": ["<leader>", "b", "p"],
+            "commands": ["workbench.action.pinEditor"]
+        },
+        {
+            "before": ["<leader>", "z"],
+            "commands": ["workbench.action.toggleZenMode"]
+        }
     ],
 
     "vim.handleKeys": {
-        "<C-f>": false
+        "<C-f>": false,
     },
 
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1
-    }
-    //////////////////////////////////////////////////////////////////////////////////////
+    },
+    "luau-lsp.completion.autocompleteEnd": true,
+    "luau-lsp.completion.imports.enabled": true,
+    "luau-lsp.completion.imports.separateGroupsWithLine": true,
+    "explorer.excludeGitIgnore": true,
+    "luau-lsp.plugin.enabled": true,
 }
